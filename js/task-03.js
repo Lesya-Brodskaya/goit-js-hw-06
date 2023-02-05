@@ -12,14 +12,27 @@ const images = [
     alt: "Group of Horses Running",
   },
 ];
-const list = document.querySelector(".gallery");
-let string = "";
-console.log(list);
-for (const { url, alt } of images) {
-  string += `<li class = "item" style="
-        display: inline-block;
-        justify-content: space-between;
-        padding-left: 10px;"><img class = "img" width = 300 height = 200 src="${url}" alt="${alt}">`;
-}
-list.insertAdjacentHTML("beforeend", string);
-console.log(string);
+const galleryEl = document.querySelector(".gallery");
+
+// let stringEl = "";
+// for (const {url, alt} of images) {
+//   stringEl += `<li class = "item" style = "display: inline-block; 
+//   justify-content: space-between;
+//  padding-left: 40px;
+//  margin-top: 30px;">
+//   <img class = "img" width = "300" height = "200" src = "${url}" alt = "${alt}"></li>`;
+// }
+
+const createImg = images.map(({ url, alt }) => {
+  let stringEl = `<li 
+  class = "item"
+   style = "display: inline-block; 
+   justify-content: space-between;
+   padding-left: 20px;
+   margin-top: 30px;">
+  <img  class = "img" alt="${alt}"; src="${url}"; width = 300"; height = "200";></li>`;
+  return stringEl;
+});
+
+galleryEl.insertAdjacentHTML("beforeend", `${createImg}`);
+console.log(galleryEl);
