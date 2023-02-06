@@ -16,7 +16,7 @@ const galleryEl = document.querySelector(".gallery");
 
 // let stringEl = "";
 // for (const {url, alt} of images) {
-//   stringEl += `<li class = "item" style = "display: inline-block; 
+//   stringEl += `<li class = "item" style = "display: inline-block;
 //   justify-content: space-between;
 //  padding-left: 40px;
 //  margin-top: 30px;">

@@ -7,9 +7,9 @@ console.log(`Number of categories: ${itemEl.length}`);
 //   console.log(`Elements: ${itemEl[i].querySelectorAll("li").length}`);
 // }
 
-itemEl.forEach(el => {
+itemEl.forEach((el) => {
   const category = el.querySelector("h2");
   const elements = el.querySelectorAll("li");
   console.log(`Category: ${category.textContent}`);
   console.log(`Elements: ${elements.length}`);
-})
+});

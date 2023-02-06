@@ -9,7 +9,7 @@ decrement.addEventListener("click", callback1);
 function callback1() {
   counterValue -= 1;
   valueEl.textContent = counterValue;
-};
+}
 
 increment.addEventListener("click", callback2);
 

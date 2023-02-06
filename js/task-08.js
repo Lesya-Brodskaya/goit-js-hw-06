@@ -1,33 +1,30 @@
-const form = document.querySelector('.login-form');
+const form = document.querySelector(".login-form");
 
-form.addEventListener('submit', onFormSubmit);
+form.addEventListener("submit", onFormSubmit);
 
 function onFormSubmit(event) {
-    event.preventDefault();  
+  event.preventDefault();
 
-    // console.log('не перезагрузилась');
+  // console.log('не перезагрузилась');
 
-    const formElements = event.currentTarget.elements;
+  const formElements = event.currentTarget.elements;
 
-    if (formElements.email.value === '' || formElements.password.value === '') {
-        alert('Не всі поля заповнені');
-    } else {
-        const formData = new FormData(event.currentTarget);
+  if (formElements.email.value === "" || formElements.password.value === "") {
+    alert("Не всі поля заповнені");
+  } else {
+    const formData = new FormData(event.currentTarget);
 
-        console.log(formData);
-        }
+    console.log(formData);
+  }
 
-        return form.reset();
-    }
-    // const mail = formElements.email.value;
-    // const password = formElements.password.value;
-    
+  return form.reset();
+}
+// const mail = formElements.email.value;
+// const password = formElements.password.value;
 
-    // const formData = {
-    //     mail,
-    //     password,
-    // };
+// const formData = {
+//     mail,
+//     password,
+// };
 
-    // console.log(formData);   
-
-
+// console.log(formData);
