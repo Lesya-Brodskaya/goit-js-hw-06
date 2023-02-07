@@ -5,26 +5,14 @@ form.addEventListener("submit", onFormSubmit);
 function onFormSubmit(event) {
   event.preventDefault();
 
-  // console.log('не перезагрузилась');
-
   const formElements = event.currentTarget.elements;
 
-  if (formElements.email.value === "" || formElements.password.value === "") {
+  if (formElements.email.value.trim() === "" || formElements.password.value === "") {
     alert("Не всі поля заповнені");
   } else {
-    const formData = new FormData(event.currentTarget);
+    const formData = Object.fromEntries(new FormData(event.currentTarget));
 
     console.log(formData);
-  }
-
-  return form.reset();
+    event.target.reset();
+   }
 }
-// const mail = formElements.email.value;
-// const password = formElements.password.value;
-
-// const formData = {
-//     mail,
-//     password,
-// };
-
-// console.log(formData);

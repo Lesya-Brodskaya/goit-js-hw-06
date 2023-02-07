@@ -3,16 +3,12 @@ const refs = {
   outputEl: document.querySelector("#name-output"),
 };
 
-// const inputEl = document.querySelector("#name-input");
-// const outputEl = document.querySelector("#name-output");
-
 refs.inputEl.addEventListener("input", onInputChange);
 
 function onInputChange(event) {
-  console.log(event.currentTarget.value);
-  refs.outputEl.textContent = event.currentTarget.value;
-
-  if (refs.outputEl.textContent === "") {
-    console.log((refs.outputEl.textContent = "Anonymous"));
+  refs.outputEl.textContent = event.currentTarget.value.trim();
+   
+  if (!refs.outputEl.textContent) {
+    refs.outputEl.textContent = "Anonymous";
   }
 }

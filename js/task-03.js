@@ -14,15 +14,6 @@ const images = [
 ];
 const galleryEl = document.querySelector(".gallery");
 
-// let stringEl = "";
-// for (const {url, alt} of images) {
-//   stringEl += `<li class = "item" style = "display: inline-block;
-//   justify-content: space-between;
-//  padding-left: 40px;
-//  margin-top: 30px;">
-//   <img class = "img" width = "300" height = "200" src = "${url}" alt = "${alt}"></li>`;
-// }
-
 const createImg = images.map(({ url, alt }) => {
   let stringEl = `<li 
   class = "item"
@@ -35,4 +26,3 @@ const createImg = images.map(({ url, alt }) => {
 });
 
 galleryEl.insertAdjacentHTML("beforeend", `${createImg}`);
-console.log(galleryEl);

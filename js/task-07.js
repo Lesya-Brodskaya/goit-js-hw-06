@@ -7,6 +7,4 @@ textEl.style.fontSize = inputEl.value + "px";
 
 function updateFontSize(event) {
   textEl.style.fontSize = event.currentTarget.value + "px";
-  // console.log(`${event.currentTarget.value} + "px"`);
-  // console.log(textEl.style.fontSize);
 }
